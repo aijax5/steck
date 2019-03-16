@@ -1,0 +1,53 @@
+    .heading {
+    height: 22rem;
+    background-color: $color-primary;
+    &--logo{
+        width: 16rem;
+        position: relative;
+        top: 3rem;
+        left: 3rem;
+    }
+    &__text {
+        position: relative;
+        top: 6rem; left: 3rem;
+        font-size: 1.4rem;
+        margin-top: 3rem;
+        width: 90%;
+        &--img{
+            border-radius: 10rem;
+            background-color: beige;
+            padding: 1rem;  
+            width: 4rem !important;
+            margin-right: 1rem;
+        }
+        &--name{
+            text-transform: capitalize;
+            font-weight: 500;
+        }
+        
+    }
+
+}
+
+.nav-left{
+    margin-top: 5rem;
+    ul{
+        li{
+            list-style-type: none;
+            text-transform: capitalize;
+            color: $col-dark;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .col-xs-12 {
+        padding: 0 !important;
+    }
+
+    .heading {
+        left: 0%;
+    }
+}

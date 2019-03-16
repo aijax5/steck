@@ -1,0 +1,27 @@
+ html {
+    font-size: 62.5% !important;
+}
+
+html body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem !important;
+    color: $col-white;
+}
+
+.container-fluid{
+    min-height: 99vh;
+    margin: 0;
+    padding: 0 !important;
+    background-color: $col-white;;
+}
+
+.overview{
+    display: none !important;
+}
+
+
+@media screen and (max-width: 480px) {
+    html{
+        font-size: 38% !important;
+    }
+  }

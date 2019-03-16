@@ -1,0 +1,21 @@
+.stats{
+    display: none;
+    &--heading{
+        align-items: flex-start;
+        text-transform: capitalize;
+        width: 100%;
+        h2{
+            font-size: 2.4rem;
+        }
+        p{
+            font-size: 1.4rem;
+            margin-top: .7rem;
+        }
+        h2,p{
+            color: $col-dark;
+            margin: 0 !important;
+            
+        }
+    }
+
+}

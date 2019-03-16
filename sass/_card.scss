@@ -1,0 +1,80 @@
+.card__container{
+    position: relative;
+    left: 22.5%;
+    margin-top: -30rem;
+    width: 72.5%;
+    height: 75vh;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+    .overview{
+        width: 100%;
+        color: $col-dark;
+        &--heading{
+            align-items: flex-start;
+            text-transform: capitalize;
+            width: 100%;
+            h2{
+                font-size: 2.4rem;
+            }
+            p{
+                font-size: 1.4rem;
+                margin-top: .7rem;
+            }
+            h2,p{
+                color: $col-dark;
+                margin: 0 !important;
+                
+            }
+        }
+        &__bottom{
+            margin-top: 5%;
+        }
+        &__card{
+            width:50rem;
+            &--title{
+                align-self: flex-start;
+                align-items: flex-start !important;
+                .chead{
+                    color: $col-dark;
+                    text-transform: capitalize;
+                }
+                a{
+                    text-decoration: none;
+                    color: $color-primary;
+                    font-size: 1.2rem;
+                }
+            }
+           
+            .chart__container{
+                .info>div{
+                    align-self: flex-start;
+                    font-size: 1.6rem;
+                    &:not(:last-child){
+                        margin-bottom: .5rem;
+                    }
+                    text-transform: capitalize;
+                    span{
+                        font-weight: 500;
+                    }
+                }
+                .info{
+                    margin-right: 5rem;
+                    .status{
+                        span{
+                            color: #39E5AE;
+                        }
+                    }
+                }
+                .thath{
+                    height: 150px;
+                    width: 100px;
+                    margin-left: 10rem;
+                    background-color: aquamarine;
+                }
+            }
+        }
+    }
+
+}
