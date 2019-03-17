@@ -1,147 +1,191 @@
 <!DOCTYPE html>
 <html>
-<!-- https://colorhunt.co/palette/16467 -->
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>STECK | Urban Sewage and Garbage Overflow Management</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>STECK | Urban Sewage and Garbage Overflow Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700" rel="stylesheet">
-    <script src="js/main.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700" rel="stylesheet">
+  <script src="js/main.js"></script>
+  <script src="js/devices.js"></script>
 
-    <!-- chart js CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+  <!-- chart js CDn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="heading ">
-            <div class="heading--logo">
+  <div class="container-fluid">
+    <div class="heading ">
+      <div class="heading--logo">
 
-                <img src="./img/steck.png" class="img-responsive" alt="steck">
+        <img src="./img/steck.png" class="img-responsive" alt="steck">
 
-            </div>
-            <div class="heading__text">
-                <div class="heading__text--img col-md-1">
-                    &nbsp;
-                </div>
-                <div class="heading__text--name">
-                    khaleesi
-                </div>
-                <div class="heading__text--email">
-                    danny@targareyan.got
-                </div>
-            </div>
-        </div>
-        <div class="nav-left">
-            <ul>
-                <li><a href="#" onclick="viewOverview()" class=" btn-text "> overview</a></li>
-                <li><a href="#" class=" btn-text "> statistics</a></li>
-                <li><a href="#" class=" btn-text "> edit</a></li>
-                <li><a href="#" class=" btn-text "> logout</a></li>
-            </ul>
-        </div>
-        <div class="card__container">
-            <div class="overview">
-                    <!-- <div class="overview--heading flex-column">
-                            <h2>overview</h2>
-                            <p>all modules in one place</p>
-                        </div> -->
-                <div class="overview__top flex-row">
-                    <div class="overview__card flex-column">
-                        <div class="overview__card--title flex-column">
-                            <div class="chead">module -I</div>
-                            <a href="#mid"> midak4700</a>
-                        </div>
-                        <div class="chart__container flex-row">
-                            <div class="info flex-column">
-                                <div class="status">Status : <span>ACTIVE</span> </div>
-                                <div class="length">Length : <span>27cms</span> </div>
-                                <div class="value">value : <span>18cms</span> </div>
-                            </div>
-                            <div class="theChart">
-                                <div class="thath"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="overview__card flex-column">
-                        <div class="overview__card--title flex-column">
-                            <div class="chead">module -I</div>
-                            <a href="#mid"> midak4700</a>
-                        </div>
-                        <div class="chart__container flex-row">
-                            <div class="info flex-column">
-                                <div class="status">Status : <span>ACTIVE</span> </div>
-                                <div class="length">Length : <span>27cms</span> </div>
-                                <div class="value">value : <span>18cms</span> </div>
-                            </div>
-                            <div class="theChart">
-                                <div class="thath"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="overview__card">&nbsp;</div> -->
-                </div>
-                <div class="overview__bottom flex-row">
-                        <div class="overview__card flex-column">
-                            <div class="overview__card--title flex-column">
-                                <div class="chead">module -II</div>
-                                <a href="#mid"> midak4700</a>
-                            </div>
-                            <div class="chart__container flex-row">
-                                <div class="info flex-column">
-                                    <div class="status">Status : <span>ACTIVE</span> </div>
-                                    <div class="length">Length : <span>27cms</span> </div>
-                                    <div class="value">value : <span>18cms</span> </div>
-                                </div>
-                                <div class="theChart">
-                                    <canvas id="module2" width="200" height="200"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="overview__card flex-column">
-                            <div class="overview__card--title flex-column">
-                                <div class="chead">module -I</div>
-                                <a href="#mid"> midak4700</a>
-                            </div>
-                            <div class="chart__container flex-row">
-                                <div class="info flex-column">
-                                    <div class="status">Status : <span>ACTIVE</span> </div>
-                                    <div class="length">Length : <span>27cms</span> </div>
-                                    <div class="value">value : <span>18cms</span> </div>
-                                </div>
-                                <div class="theChart">
-                                    <div class="thath"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="overview__card">&nbsp;</div> -->
-                    </div>
-            </div>
-            <div class="stats">
-                <div class="stats--heading flex-column">
-                    <h2>statistics</h2>
-                    <p>take a look at your recent usage in one place</p>
-                </div>
-            </div>
-            <div class="edit">
-                <!-- edit -->
-            </div>
-        </div>
-
+      </div>
     </div>
-    <script src="js/chart.js"></script>
+    <div class="nav-left">
+      <ul>
+        <li><a href="#" id='overview' onclick="viewOverview(this.id)" class=" btn-text "> overview</a></li>
+        <li><a href="#" class=" btn-text "> statistics</a></li>
+        <li><a href="#" class=" btn-text "> edit</a></li>
+        <li><a href="#" class=" btn-text "> logout</a></li>
+      </ul>
+    </div>
+    <div class="card__container">
+      <div class="overview hidden">
+        <div class="overview--heading flex-column">
+          <h2>overview</h2>
+          <p>all modules in one place</p>
+        </div>
+        <div class="overview__top flex-row">
+          <div class="overview__card flex-column">
+            <div class="overview__card--title flex-column">
+              <div class="chead">module -I</div>
+              <a href="#mid"> midak4700</a>
+            </div>
+            <div class="chart__container flex-row">
+              <div class="info flex-column">
+                <div class="status">Status : <span>ACTIVE</span> </div>
+                <div class="length">Length : <span>27cms</span> </div>
+                <div class="value">value : <span>18cms</span> </div>
+              </div>
+              <div class="theChart">
+                <div class="thath"></div>
+              </div>
+            </div>
+          </div>
+          <div class="overview__card flex-column">
+            <div class="overview__card--title flex-column">
+              <div class="chead">module -I</div>
+              <a href="#mid"> midak4700</a>
+            </div>
+            <div class="chart__container flex-row">
+              <div class="info flex-column">
+                <div class="status">Status : <span>ACTIVE</span> </div>
+                <div class="length">Length : <span>27cms</span> </div>
+                <div class="value">value : <span>18cms</span> </div>
+              </div>
+              <div class="theChart">
+                <div class="thath"></div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="overview__card">&nbsp;</div> -->
+        </div>
+        <div class="overview__bottom flex-row">
+          <div class="overview__card flex-column">
+            <div class="overview__card--title flex-column">
+              <div class="chead">module -II</div>
+              <a href="#mid"> midak4700</a>
+            </div>
+            <div class="chart__container flex-row">
+              <div class="info flex-column">
+                <div class="status">Status : <span>ACTIVE</span> </div>
+                <div class="length">Length : <span>27cms</span> </div>
+                <div class="value">value : <span>18cms</span> </div>
+              </div>
+              <div class="theChart">
+                <canvas id="module2"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="overview__card flex-column">
+            <div class="overview__card--title flex-column">
+              <div class="chead">module -I</div>
+              <a href="#mid"> midak4700</a>
+            </div>
+            <div class="chart__container flex-row">
+              <div class="info flex-column">
+                <div class="status">Status : <span>ACTIVE</span> </div>
+                <div class="length">Length : <span>27cms</span> </div>
+                <div class="value">value : <span>18cms</span> </div>
+              </div>
+              <div class="theChart">
+                <div class="thath"></div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="overview__card">&nbsp;</div> -->
+        </div>
+      </div>
+      <div class="stats flex-column">
+        <div class="cont--heading flex-column">
+          <h2>statistics</h2>
+          <p>take a look at your recent usage in one place</p>
+        </div>
+        <div class="stats--top flex-row">
+          <div class="lchart--cont">
+            &nbsp;
+          </div>
+          <div class="lchart--cont">
+            &nbsp;
+          </div>
+          <div class="lchart--cont">
+            &nbsp;
+          </div>
+        </div>
+        <div class="stats--bottom flex-row">
+          <div class="lchart--cont flex-column">
+            <div class="menu--cont flex-row">
+              <div class="dropdown">
+                <label class="dropdown--label">
+                  <input type="checkbox" class="dropdown--checkbox" />
+                  <span class="dropdown--text">
+                    Order By
+                    <span class="dropdown--arrow"></span>
+                  </span>
+
+                  <div class="dropdown--list">
+                    <ul>
+                      <li><a href="#monthly" onclick="adddata()">Monthly</a></li>
+                      <li><a href="#weekly" onclick="thisWeek()">Weekly</a></li>
+                      <li><a href="">Yearly</a></li>
+                    </ul>
+                  </div>
+
+
+                </label>
+              </div>
+            </div>
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="devices">
+        <div class="cont--heading flex-column">
+          <h2>devices</h2>
+          <p>all your devices in one place</p>
+        </div>
+
+        <div class="devices--cont flex-column">
+          <table class="devices--cont__table">
+            <tr>`
+              <th>module id</th>
+              <th>mapped to</th>
+              <th>type</th>
+              <th>status</th>
+            </tr>
+          </table>
+        </div>
+        <!-- edit -->
+      </div>
+    </div>
+
+  </div>
+  <script src="js/values.js"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/lineChart.js"></script>
 </body>
 
 </html>

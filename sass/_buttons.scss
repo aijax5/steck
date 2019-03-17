@@ -63,10 +63,12 @@
     }
     &:focus{
         color: $color-primary;
+        border-bottom: none;
         font-weight: 700;
     }
     &:active{
         font-weight: 700;
-        // color: $color-primary;
+        border-bottom: none;
+        color: $color-primary;
     }
 }

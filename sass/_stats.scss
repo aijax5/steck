@@ -1,20 +1,57 @@
+.cont--heading{
+    align-items: flex-start;
+    text-transform: capitalize;
+    width: 100%;
+    h2{
+        font-size: 2.4rem;
+    }
+    p{
+        font-size: 1.4rem;
+        margin-top: .7rem;
+    }
+    h2,p{
+        color: $col-dark;
+        margin: 0 !important;
+        
+    }
+}
 .stats{
-    display: none;
-    &--heading{
-        align-items: flex-start;
-        text-transform: capitalize;
+    // display: none;
+   
+    &--top{
+        display: none;
+        margin-top: 3rem;
         width: 100%;
-        h2{
-            font-size: 2.4rem;
+        height: 35%;
+        // background-color: lightgrey;
+        .lchart--cont{
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+            background-color: $color-primary;
+            height: 15rem;
+            width: 30%;
+            &:not(:last-child){
+                margin-right: 3rem;
+                
+            }
         }
-        p{
-            font-size: 1.4rem;
-            margin-top: .7rem;
-        }
-        h2,p{
-            color: $col-dark;
-            margin: 0 !important;
-            
+
+    }
+
+    &--bottom{
+        margin-top: 7rem;
+        width: 100%;
+        .lchart--cont{
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+            height: 30rem;
+            width: 65%;
+            canvas{
+                height: 80% !important;
+                width: 80% !important;
+            }
+            .menu--cont{
+                width: 100%;
+            }
         }
     }
 

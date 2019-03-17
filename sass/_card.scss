@@ -1,16 +1,34 @@
 .card__container{
     position: relative;
-    left: 22.5%;
+    left: 18%;
     margin-top: -30rem;
-    width: 72.5%;
-    height: 75vh;
+    color: $col-dark !important;
+    width: 77%;
+    height: 80vh;
     background-color: white;
-    padding: 2rem;
+    padding: 1rem 2rem;
     border-radius: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+    .active{
+        display:flex !important;
+        flex-direction: column;
+    }
+    .hidden{
+        display: none;
+    }
+    
     .overview{
+        // display: flex  !important;
+        // flex-direction: column;
         width: 100%;
         color: $col-dark;
+        canvas{
+            // margin-top: -10px;
+            align-self: flex-start;
+            width:150px !important;
+            height:190px !important;
+          
+          }
         &--heading{
             align-items: flex-start;
             text-transform: capitalize;
@@ -28,8 +46,11 @@
                 
             }
         }
+        &__top{
+            margin-top: 1rem;
+        }
         &__bottom{
-            margin-top: 5%;
+            margin-top: 2%;
         }
         &__card{
             width:50rem;
@@ -37,17 +58,20 @@
                 align-self: flex-start;
                 align-items: flex-start !important;
                 .chead{
+                    font-size: 1.4rem;
                     color: $col-dark;
                     text-transform: capitalize;
                 }
                 a{
                     text-decoration: none;
                     color: $color-primary;
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                 }
             }
            
             .chart__container{
+                height: 19rem;
+                align-items: flex-start;
                 .info>div{
                     align-self: flex-start;
                     font-size: 1.6rem;
@@ -60,6 +84,7 @@
                     }
                 }
                 .info{
+                    margin-top: 3rem;
                     margin-right: 5rem;
                     .status{
                         span{
